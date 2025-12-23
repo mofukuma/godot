@@ -41,42 +41,46 @@
 void EditorMainScreen::_notification(int p_what) {
 	switch (p_what) {
 		case NOTIFICATION_READY: {
-			// ALWAYS hide all tab buttons
+			// First, select the appropriate editor/plugin
+			bool education_found = false;
+
+			// Try to select Education plugin if it exists
+			for (const KeyValue<String, EditorPlugin *> &E : main_editor_plugins) {
+				if (E.key == "Education") {
+					print_line("Found Education plugin, selecting it...");
+					select_by_name("Education");
+					education_found = true;
+					break;
+				}
+			}
+
+			// Fallback: select first available if Education not found
+			if (!education_found) {
+				print_line("Education plugin not found, selecting fallback...");
+				if (EDITOR_3D < buttons.size() && buttons[EDITOR_3D]->is_visible()) {
+					select(EDITOR_3D);
+				} else {
+					for (int i = 0; i < buttons.size(); i++) {
+						Button *editor_button = buttons[i];
+						if (editor_button->is_visible()) {
+							select(i);
+							break;
+						}
+					}
+				}
+			}
+
+			// THEN hide all tab buttons (after selection is made)
 			if (button_hb) {
 				button_hb->hide();
 			}
 
-			// ALWAYS hide ALL standard editor UI elements (docks, menus, etc.)
+			// THEN hide ALL standard editor UI elements (docks, menus, etc.)
 			EditorNode *editor = EditorNode::get_singleton();
 			if (editor) {
 				// Use call_deferred to ensure all UI is initialized first
 				callable_mp(editor, &EditorNode::enable_education_mode).call_deferred();
 			}
-
-			// Try to select Education plugin if it exists, otherwise select first available
-			for (const KeyValue<String, EditorPlugin *> &E : main_editor_plugins) {
-				if (E.key == "Education") {
-					select_by_name("Education");
-					return;
-				}
-			}
-
-			// Fallback: select 3D editor if available
-			if (EDITOR_3D < buttons.size() && buttons[EDITOR_3D]->is_visible()) {
-				select(EDITOR_3D);
-				return;
-			}
-
-			// Switch to the first main screen plugin that is enabled
-			for (int i = 0; i < buttons.size(); i++) {
-				Button *editor_button = buttons[i];
-				if (editor_button->is_visible()) {
-					select(i);
-					return;
-				}
-			}
-
-			select(-1);
 		} break;
 		case NOTIFICATION_THEME_CHANGED: {
 			for (int i = 0; i < buttons.size(); i++) {

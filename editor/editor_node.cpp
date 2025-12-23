@@ -6382,7 +6382,8 @@ void EditorNode::enable_education_mode() {
 		scene_tabs->hide();
 	}
 
-	// Hide ALL split containers to remove docks completely
+	// Hide side split containers (left and right docks) but KEEP main_hsplit visible
+	// main_hsplit contains the center area where editor_main_screen is displayed
 	if (left_l_hsplit) {
 		left_l_hsplit->hide();
 	}
@@ -6411,9 +6412,10 @@ void EditorNode::enable_education_mode() {
 		right_r_vsplit->hide();
 	}
 
-	if (main_hsplit) {
-		main_hsplit->hide();
-	}
+	// DO NOT hide main_hsplit - it contains the center content area!
+	// if (main_hsplit) {
+	//     main_hsplit->hide();
+	// }
 
 	// Hide bottom panel
 	if (bottom_panel) {
@@ -6424,6 +6426,12 @@ void EditorNode::enable_education_mode() {
 	if (editor_main_screen) {
 		editor_main_screen->set_v_size_flags(Control::SIZE_EXPAND_FILL);
 		editor_main_screen->set_h_size_flags(Control::SIZE_EXPAND_FILL);
+	}
+
+	// Make sure center_split expands to take full window
+	if (center_split) {
+		center_split->set_v_size_flags(Control::SIZE_EXPAND_FILL);
+		center_split->set_h_size_flags(Control::SIZE_EXPAND_FILL);
 	}
 }
 
