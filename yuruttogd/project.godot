@@ -17,3 +17,7 @@ config/features=PackedStringArray("4.5")
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/hello_world_education/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="mobile"

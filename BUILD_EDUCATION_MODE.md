@@ -2,11 +2,14 @@
 
 ## 概要
 
-Godot Engineに以下の教育モード機能を追加しました：
+Godot Engineに完全な教育モード機能を追加しました：
 
 1. **自動起動**: "Education"プラグインが存在する場合、起動時に自動選択
-2. **タブ非表示**: 他のエディタタブ（2D, 3D, Script等）を完全に非表示
+2. **タブ完全非表示**: 2D/3D/Script等の他のエディタタブを完全に非表示
 3. **タブ切り替え防止**: キーボードショートカットやプログラム的なタブ切り替えを無効化
+4. **全UI非表示**: シーンツリー、インスペクタ、その他すべての標準エディタUIを非表示
+5. **Exit以外のメニュー非表示**: Fileメニューに"Quit"オプションのみ表示、他のメニューはすべて非表示
+6. **全画面教育UI**: Educationプラグインが画面全体を占有
 
 ## 変更したファイル
 
@@ -14,16 +17,37 @@ Godot Engineに以下の教育モード機能を追加しました：
 
 3つの修正を加えました：
 
-1. **NOTIFICATION_READY** (行43-54):
+1. **NOTIFICATION_READY** ([editor/editor_main_screen.cpp:44-61](editor/editor_main_screen.cpp#L44-L61)):
    - "Education"プラグインを自動検出
    - 自動選択
    - タブボタンコンテナを非表示化
+   - `EditorNode::enable_education_mode()`を呼び出してすべてのUIを非表示
 
-2. **select()** (行180-185):
+2. **select()** ([editor/editor_main_screen.cpp:200-204](editor/editor_main_screen.cpp#L200-L204)):
    - Educationモードからの切り替えを防止
 
-3. **select_next() / select_prev()** (行139-175):
+3. **select_next() / select_prev()** ([editor/editor_main_screen.cpp:149-152, 169-172](editor/editor_main_screen.cpp#L149-L152)):
    - タブ切り替えショートカットを無効化
+
+### editor/editor_node.h
+
+新しいメソッドを追加：
+
+- **enable_education_mode()** ([editor/editor_node.h:796](editor/editor_node.h#L796)):
+  - すべてのエディタUIを非表示にするpublicメソッドを宣言
+
+### editor/editor_node.cpp
+
+新しいメソッドを実装：
+
+- **enable_education_mode()** ([editor/editor_node.cpp:6297-6388](editor/editor_node.cpp#L6297-L6388)):
+  - すべてのドック（シーンツリー、インスペクタ等）を非表示
+  - Fileメニューを"Quit"のみに制限
+  - Project/Debug/Settings/Help/Toolメニューを非表示
+  - プロジェクト実行バー、検索ボタン、エクスポートボタンを非表示
+  - シーンタブを非表示
+  - 左右の分割コンテナを非表示
+  - Education plugin UIが全画面表示されるように設定
 
 ## ビルド手順
 
@@ -116,9 +140,17 @@ enabled=PackedStringArray("res://addons/hello_world_education/plugin.cfg")
 ### 正常動作の確認
 
 1. Godotエディタを起動
-2. 画面全体が "Hello World Education" パネルで埋まる
-3. 上部にタブが**表示されない**
-4. Ctrl+1, Ctrl+2 等のショートカットが無効
+2. **即座に**画面全体が "Hello World - Godot Education System" パネルで埋まる
+3. 以下のUIが**すべて非表示**になる：
+   - ✅ 上部のタブボタン（2D/3D/Script等）
+   - ✅ 左側のシーンツリーとインスペクタ
+   - ✅ 右側のドック
+   - ✅ シーンタブ（開いているファイルのタブ）
+   - ✅ プロジェクト実行バー（再生/停止ボタン）
+   - ✅ Project/Debug/Settings/Help/Toolメニュー
+4. **Fileメニューに"Quit"オプションのみ表示**される
+5. Ctrl+1, Ctrl+2 等のショートカットが無効
+6. Education pluginのUIが完全に全画面表示される
 
 ### 通常モードに戻す方法
 

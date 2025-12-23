@@ -44,16 +44,18 @@ EOF
     echo "✓ project.godot を作成しました"
 fi
 
-# Godotエディタのバイナリを探す
+# Godotエディタのバイナリを探す（親ディレクトリのbin/）
 GODOT_BIN=""
 
-if [ -f "bin/godot.macos.editor.dev.arm64" ]; then
-    GODOT_BIN="bin/godot.macos.editor.dev.arm64"
-elif [ -f "bin/godot.windows.editor.x86_64.exe" ]; then
-    GODOT_BIN="bin/godot.windows.editor.x86_64.exe"
+if [ -f "../bin/godot.macos.editor.dev.arm64" ]; then
+    GODOT_BIN="../bin/godot.macos.editor.dev.arm64"
+elif [ -f "../bin/godot.macos.editor.dev.universal" ]; then
+    GODOT_BIN="../bin/godot.macos.editor.dev.universal"
+elif [ -f "../bin/godot.windows.editor.x86_64.exe" ]; then
+    GODOT_BIN="../bin/godot.windows.editor.x86_64.exe"
 else
     echo "❌ エラー: Godotエディタのバイナリが見つかりません"
-    echo "   bin/ ディレクトリにビルド済みのエディタを配置してください"
+    echo "   ../bin/ ディレクトリにビルド済みのエディタを配置してください"
     exit 1
 fi
 
@@ -63,8 +65,8 @@ echo "========================================="
 echo "  教育モードで起動中..."
 echo "========================================="
 echo ""
-echo "注: エディタが起動したら、上部のタブで"
-echo "    'Education' を選択してください"
+echo "注: エディタは自動的に教育モードで"
+echo "    全画面表示されます"
 echo ""
 
 # Godotエディタを起動

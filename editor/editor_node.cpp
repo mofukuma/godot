@@ -6294,6 +6294,139 @@ bool EditorNode::is_distraction_free_mode_enabled() const {
 	return distraction_free->is_pressed();
 }
 
+void EditorNode::enable_education_mode() {
+	// Hide ALL editor UI elements - no conditions, always hide everything
+	print_line("Enabling full education mode - hiding all editor UI");
+
+	// Hide ALL docks (scene tree, inspector, file system, etc.)
+	if (editor_dock_manager) {
+		editor_dock_manager->set_docks_visible(false);
+	}
+
+	// Hide the entire title bar (contains all menus)
+	if (title_bar) {
+		title_bar->hide();
+	}
+
+	// Hide main menu bar
+	if (main_menu_bar) {
+		main_menu_bar->hide();
+	}
+
+	// Hide main menu button
+	if (main_menu_button) {
+		main_menu_button->hide();
+	}
+
+	// Hide all individual menus
+	if (file_menu) {
+		file_menu->hide();
+	}
+
+	if (project_menu) {
+		project_menu->hide();
+	}
+
+	if (debug_menu) {
+		debug_menu->hide();
+	}
+
+	if (settings_menu) {
+		settings_menu->hide();
+	}
+
+	if (help_menu) {
+		help_menu->hide();
+	}
+
+	if (tool_menu) {
+		tool_menu->hide();
+	}
+
+	if (apple_menu) {
+		apple_menu->hide();
+	}
+
+	// Hide project run bar (play/pause buttons)
+	if (project_run_bar) {
+		project_run_bar->hide();
+	}
+
+	// Hide search button
+	if (search_button) {
+		search_button->hide();
+	}
+
+	// Hide distraction free mode button
+	if (distraction_free) {
+		distraction_free->hide();
+	}
+
+	// Hide export button
+	if (export_button) {
+		export_button->hide();
+	}
+
+	// Hide renderer selector
+	if (renderer) {
+		renderer->hide();
+	}
+
+	// Hide project title (shows scene name)
+	if (project_title) {
+		project_title->hide();
+	}
+
+	// Hide scene tabs (which shows open scene files)
+	if (scene_tabs) {
+		scene_tabs->hide();
+	}
+
+	// Hide ALL split containers to remove docks completely
+	if (left_l_hsplit) {
+		left_l_hsplit->hide();
+	}
+
+	if (left_l_vsplit) {
+		left_l_vsplit->hide();
+	}
+
+	if (left_r_hsplit) {
+		left_r_hsplit->hide();
+	}
+
+	if (left_r_vsplit) {
+		left_r_vsplit->hide();
+	}
+
+	if (right_hsplit) {
+		right_hsplit->hide();
+	}
+
+	if (right_l_vsplit) {
+		right_l_vsplit->hide();
+	}
+
+	if (right_r_vsplit) {
+		right_r_vsplit->hide();
+	}
+
+	if (main_hsplit) {
+		main_hsplit->hide();
+	}
+
+	// Hide bottom panel
+	if (bottom_panel) {
+		bottom_panel->hide();
+	}
+
+	// Ensure the main screen area expands to fill all available space
+	if (editor_main_screen) {
+		editor_main_screen->set_v_size_flags(Control::SIZE_EXPAND_FILL);
+		editor_main_screen->set_h_size_flags(Control::SIZE_EXPAND_FILL);
+	}
+}
+
 Dictionary EditorNode::drag_resource(const Ref<Resource> &p_res, Control *p_from) {
 	Control *drag_control = memnew(Control);
 	TextureRect *drag_preview = memnew(TextureRect);

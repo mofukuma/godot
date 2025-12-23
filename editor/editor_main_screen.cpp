@@ -41,26 +41,33 @@
 void EditorMainScreen::_notification(int p_what) {
 	switch (p_what) {
 		case NOTIFICATION_READY: {
-			// EDUCATION MODE: Auto-select Education plugin if it exists and hide other tabs
+			// ALWAYS hide all tab buttons
+			if (button_hb) {
+				button_hb->hide();
+			}
+
+			// ALWAYS hide ALL standard editor UI elements (docks, menus, etc.)
+			EditorNode *editor = EditorNode::get_singleton();
+			if (editor) {
+				// Use call_deferred to ensure all UI is initialized first
+				callable_mp(editor, &EditorNode::enable_education_mode).call_deferred();
+			}
+
+			// Try to select Education plugin if it exists, otherwise select first available
 			for (const KeyValue<String, EditorPlugin *> &E : main_editor_plugins) {
 				if (E.key == "Education") {
 					select_by_name("Education");
-					// Hide all tab buttons to force education mode
-					if (button_hb) {
-						button_hb->hide();
-					}
 					return;
 				}
 			}
 
+			// Fallback: select 3D editor if available
 			if (EDITOR_3D < buttons.size() && buttons[EDITOR_3D]->is_visible()) {
-				// If the 3D editor is enabled, use this as the default.
 				select(EDITOR_3D);
 				return;
 			}
 
-			// Switch to the first main screen plugin that is enabled. Usually this is
-			// 2D, but may be subsequent ones if 2D is disabled in the feature profile.
+			// Switch to the first main screen plugin that is enabled
 			for (int i = 0; i < buttons.size(); i++) {
 				Button *editor_button = buttons[i];
 				if (editor_button->is_visible()) {
@@ -137,10 +144,8 @@ int EditorMainScreen::_get_current_main_editor() const {
 }
 
 void EditorMainScreen::select_next() {
-	// EDUCATION MODE: Prevent tab switching
-	if (selected_plugin && selected_plugin->get_plugin_name() == "Education") {
-		return;
-	}
+	// Tab switching is disabled - do nothing
+	return;
 
 	int editor = _get_current_main_editor();
 
@@ -156,10 +161,8 @@ void EditorMainScreen::select_next() {
 }
 
 void EditorMainScreen::select_prev() {
-	// EDUCATION MODE: Prevent tab switching
-	if (selected_plugin && selected_plugin->get_plugin_name() == "Education") {
-		return;
-	}
+	// Tab switching is disabled - do nothing
+	return;
 
 	int editor = _get_current_main_editor();
 
@@ -188,12 +191,6 @@ void EditorMainScreen::select_by_name(const String &p_name) {
 }
 
 void EditorMainScreen::select(int p_index) {
-	// EDUCATION MODE: Prevent switching away from Education plugin
-	if (selected_plugin && selected_plugin->get_plugin_name() == "Education") {
-		// Already in education mode, don't allow switching to other tabs
-		return;
-	}
-
 	if (EditorNode::get_singleton()->is_changing_scene()) {
 		return;
 	}
