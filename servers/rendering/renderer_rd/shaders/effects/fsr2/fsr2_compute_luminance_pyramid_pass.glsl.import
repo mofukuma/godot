@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://blr0udpy2x477"
+path="res://.godot/imported/fsr2_compute_luminance_pyramid_pass.glsl-412f80ded2faac1b681c9ce22ef0dd88.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/effects/fsr2/fsr2_compute_luminance_pyramid_pass.glsl"
+dest_files=["res://.godot/imported/fsr2_compute_luminance_pyramid_pass.glsl-412f80ded2faac1b681c9ce22ef0dd88.res"]
+
+[params]
+

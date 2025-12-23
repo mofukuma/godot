@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://bedriko2gyfhr"
+path="res://.godot/imported/cluster_data_inc.glsl-230b678b496669dfc630bf7d7c567cba.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/cluster_data_inc.glsl"
+dest_files=["res://.godot/imported/cluster_data_inc.glsl-230b678b496669dfc630bf7d7c567cba.res"]
+
+[params]
+

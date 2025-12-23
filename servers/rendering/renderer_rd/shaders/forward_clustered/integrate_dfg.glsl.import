@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://dqc6cjwqi4rbl"
+path="res://.godot/imported/integrate_dfg.glsl-d0b1402c21c8f71185b4e058a25ca1ca.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/forward_clustered/integrate_dfg.glsl"
+dest_files=["res://.godot/imported/integrate_dfg.glsl-d0b1402c21c8f71185b4e058a25ca1ca.res"]
+
+[params]
+

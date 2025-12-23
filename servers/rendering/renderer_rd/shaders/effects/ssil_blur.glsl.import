@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://bp50pnyg7rhxr"
+path="res://.godot/imported/ssil_blur.glsl-eba75b986ad8f7a24aa1cdb7f319c22c.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/effects/ssil_blur.glsl"
+dest_files=["res://.godot/imported/ssil_blur.glsl-eba75b986ad8f7a24aa1cdb7f319c22c.res"]
+
+[params]
+

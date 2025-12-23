@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://bpk7qu2djku5a"
+path="res://.godot/imported/sdfgi_direct_light.glsl-96792d4bbd8938811baae909e8a22921.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/environment/sdfgi_direct_light.glsl"
+dest_files=["res://.godot/imported/sdfgi_direct_light.glsl-96792d4bbd8938811baae909e8a22921.res"]
+
+[params]
+

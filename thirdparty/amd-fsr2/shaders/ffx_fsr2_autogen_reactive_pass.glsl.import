@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://dnesj6aag3t84"
+path="res://.godot/imported/ffx_fsr2_autogen_reactive_pass.glsl-7b42b8dc0616702a6b429b1a27593420.res"
+
+[deps]
+
+source_file="res://thirdparty/amd-fsr2/shaders/ffx_fsr2_autogen_reactive_pass.glsl"
+dest_files=["res://.godot/imported/ffx_fsr2_autogen_reactive_pass.glsl-7b42b8dc0616702a6b429b1a27593420.res"]
+
+[params]
+

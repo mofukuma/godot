@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://bblku475chrae"
+path="res://.godot/imported/blit.glsl-ba7ab1b2019553578000ca86e7876ad7.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/blit.glsl"
+dest_files=["res://.godot/imported/blit.glsl-ba7ab1b2019553578000ca86e7876ad7.res"]
+
+[params]
+

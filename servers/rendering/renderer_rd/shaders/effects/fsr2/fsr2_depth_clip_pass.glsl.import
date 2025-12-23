@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://y0ok0a0bhst7"
+path="res://.godot/imported/fsr2_depth_clip_pass.glsl-2f7017c6c41cf94c1bc0fd8c3942b13f.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/effects/fsr2/fsr2_depth_clip_pass.glsl"
+dest_files=["res://.godot/imported/fsr2_depth_clip_pass.glsl-2f7017c6c41cf94c1bc0fd8c3942b13f.res"]
+
+[params]
+

@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://cxnh4huf0vpgl"
+path="res://.godot/imported/sdfgi_debug_probes.glsl-3f3a55171387bed77569b3121272507b.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/environment/sdfgi_debug_probes.glsl"
+dest_files=["res://.godot/imported/sdfgi_debug_probes.glsl-3f3a55171387bed77569b3121272507b.res"]
+
+[params]
+

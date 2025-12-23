@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://x4bybqh02aov"
+path="res://.godot/imported/lm_common_inc.glsl-3d848b008c900c3032e23e756954483b.res"
+
+[deps]
+
+source_file="res://modules/lightmapper_rd/lm_common_inc.glsl"
+dest_files=["res://.godot/imported/lm_common_inc.glsl-3d848b008c900c3032e23e756954483b.res"]
+
+[params]
+

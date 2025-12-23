@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://c07prjvrmukwl"
+path="res://.godot/imported/ssil_interleave.glsl-5d38b2aa3148601b511232887dcb4686.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/effects/ssil_interleave.glsl"
+dest_files=["res://.godot/imported/ssil_interleave.glsl-5d38b2aa3148601b511232887dcb4686.res"]
+
+[params]
+

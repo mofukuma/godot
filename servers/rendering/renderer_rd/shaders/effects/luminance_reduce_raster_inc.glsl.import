@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://cp7iqhrdqu3ea"
+path="res://.godot/imported/luminance_reduce_raster_inc.glsl-d7bec560e921f29dc6d5134e9ab226f6.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/effects/luminance_reduce_raster_inc.glsl"
+dest_files=["res://.godot/imported/luminance_reduce_raster_inc.glsl-d7bec560e921f29dc6d5134e9ab226f6.res"]
+
+[params]
+

@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://dv58g7dwkxw2r"
+path="res://.godot/imported/skeleton.glsl-e75a7311f59c3e1ad02a29b996a5a1b4.res"
+
+[deps]
+
+source_file="res://drivers/gles3/shaders/skeleton.glsl"
+dest_files=["res://.godot/imported/skeleton.glsl-e75a7311f59c3e1ad02a29b996a5a1b4.res"]
+
+[params]
+

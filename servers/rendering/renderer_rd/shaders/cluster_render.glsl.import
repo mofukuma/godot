@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://dk3bfrubsefv8"
+path="res://.godot/imported/cluster_render.glsl-4c233fbd42e5bb1dc1842de449f60808.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/cluster_render.glsl"
+dest_files=["res://.godot/imported/cluster_render.glsl-4c233fbd42e5bb1dc1842de449f60808.res"]
+
+[params]
+

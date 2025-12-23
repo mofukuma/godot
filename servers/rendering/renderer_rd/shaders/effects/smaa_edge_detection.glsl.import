@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://bxy2weu4shgij"
+path="res://.godot/imported/smaa_edge_detection.glsl-a1646dd98e2d058c690d822ad80eeed0.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/effects/smaa_edge_detection.glsl"
+dest_files=["res://.godot/imported/smaa_edge_detection.glsl-a1646dd98e2d058c690d822ad80eeed0.res"]
+
+[params]
+

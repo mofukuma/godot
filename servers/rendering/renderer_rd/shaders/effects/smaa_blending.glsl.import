@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://c7miepvqwat5x"
+path="res://.godot/imported/smaa_blending.glsl-de17b229fdb8c5e5eac54e38174adb12.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/effects/smaa_blending.glsl"
+dest_files=["res://.godot/imported/smaa_blending.glsl-de17b229fdb8c5e5eac54e38174adb12.res"]
+
+[params]
+

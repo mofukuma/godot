@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://c1nskc70yrww"
+path="res://.godot/imported/shadow_frustum.glsl-ec9df6b0720ecf3d521b888da6bbf9af.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/effects/shadow_frustum.glsl"
+dest_files=["res://.godot/imported/shadow_frustum.glsl-ec9df6b0720ecf3d521b888da6bbf9af.res"]
+
+[params]
+

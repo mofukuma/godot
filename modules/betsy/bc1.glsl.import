@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://05u6lr3cnxpa"
+path="res://.godot/imported/bc1.glsl-dda8505b291d2e01e8120e44b77119fd.res"
+
+[deps]
+
+source_file="res://modules/betsy/bc1.glsl"
+dest_files=["res://.godot/imported/bc1.glsl-dda8505b291d2e01e8120e44b77119fd.res"]
+
+[params]
+

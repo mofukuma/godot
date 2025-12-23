@@ -1,0 +1,49 @@
+diff --git a/editor/editor_main_screen.cpp b/editor/editor_main_screen.cpp
+index 1234567..abcdefg 100644
+--- a/editor/editor_main_screen.cpp
++++ b/editor/editor_main_screen.cpp
+@@ -40,6 +40,15 @@
+
+ void EditorMainScreen::_notification(int p_what) {
+ 	switch (p_what) {
+ 		case NOTIFICATION_READY: {
++			// EDUCATION MODE: Auto-select Education plugin if it exists
++			for (const KeyValue<String, EditorPlugin *> &E : main_editor_plugins) {
++				if (E.key == "Education") {
++					select_by_name("Education");
++					// Hide all tab buttons in education mode
++					if (button_hb) {
++						button_hb->hide();
++					}
++					return;
++				}
++			}
++
+ 			if (EDITOR_3D < buttons.size() && buttons[EDITOR_3D]->is_visible()) {
+ 				// If the 3D editor is enabled, use this as the default.
+ 				select(EDITOR_3D);
+@@ -165,6 +174,13 @@ void EditorMainScreen::select_by_name(const String &p_name) {
+ }
+
+ void EditorMainScreen::select(int p_index) {
++	// EDUCATION MODE: Prevent switching away from Education plugin
++	if (selected_plugin && selected_plugin->get_plugin_name() == "Education") {
++		// Already in education mode, don't allow switching
++		return;
++	}
++
+ 	if (EditorNode::get_singleton()->is_changing_scene()) {
+ 		return;
+ 	}
+diff --git a/editor/editor_main_screen.h b/editor/editor_main_screen.h
+index 1234567..abcdefg 100644
+--- a/editor/editor_main_screen.h
++++ b/editor/editor_main_screen.h
+@@ -59,6 +59,7 @@ private:
+ 	Vector<EditorPlugin *> editor_table;
+ 	HashMap<String, EditorPlugin *> main_editor_plugins;
+
++	bool education_mode_locked = false;
+ 	int _get_current_main_editor() const;
+
+ protected:

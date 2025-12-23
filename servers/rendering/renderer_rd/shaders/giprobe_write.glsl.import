@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://cm6dqigjgdrlk"
+path="res://.godot/imported/giprobe_write.glsl-6207a1067cdb626d6bb84639fbd5c6d5.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/giprobe_write.glsl"
+dest_files=["res://.godot/imported/giprobe_write.glsl-6207a1067cdb626d6bb84639fbd5c6d5.res"]
+
+[params]
+

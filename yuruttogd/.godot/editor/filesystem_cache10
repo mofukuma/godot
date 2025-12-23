@@ -1,0 +1,13 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1766469880
+main.tscn::PackedScene::3895221324092431864::1766469812::0::1::::<><><>0<>0<><>::res://main_panel.gd
+main_panel.gd::GDScript::2681889666793042625::1766469792::0::1::::<>Control<><>0<>1<><>::
+::res://addons/::1766466194
+::res://addons/hello_world_education/::1766468477
+plugin.cfg::TextFile::-1::1766466199::0::1::::<><><>0<>0<><>::
+plugin.gd::GDScript::4065712950078898629::1766466208::0::1::::<>EditorPlugin<><>0<>1<><>::
+README.md::TextFile::-1::1766466378::0::1::::<><><>0<>0<><>::
+::res://addons/hello_world_education/ui/::1766468477
+main_panel.gd::GDScript::5721243218327744574::1766466234::0::1::::<>Control<><>0<>1<><>::
+main_panel.tscn::PackedScene::3895221324092431864::1766466228::0::1::::<><><>0<>0<><>::res://addons/hello_world_education/ui/main_panel.gd
+::res://bin/::1766469667

@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://cmugpbjd7p13o"
+path="res://.godot/imported/screen_space_reflection_inc.glsl-023940d17fa0f5eba3f39a806d590191.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/effects/screen_space_reflection_inc.glsl"
+dest_files=["res://.godot/imported/screen_space_reflection_inc.glsl-023940d17fa0f5eba3f39a806d590191.res"]
+
+[params]
+

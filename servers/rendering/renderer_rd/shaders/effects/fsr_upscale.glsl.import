@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://p157d66w3lae"
+path="res://.godot/imported/fsr_upscale.glsl-ba9eeb41d47a9668efdf901ce84e9c52.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/effects/fsr_upscale.glsl"
+dest_files=["res://.godot/imported/fsr_upscale.glsl-ba9eeb41d47a9668efdf901ce84e9c52.res"]
+
+[params]
+

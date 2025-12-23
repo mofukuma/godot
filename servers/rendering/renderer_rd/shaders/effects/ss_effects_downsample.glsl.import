@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://dgv1io6l0s3v"
+path="res://.godot/imported/ss_effects_downsample.glsl-3a0d9e65ad99c2f681bd35c921848995.res"
+
+[deps]
+
+source_file="res://servers/rendering/renderer_rd/shaders/effects/ss_effects_downsample.glsl"
+dest_files=["res://.godot/imported/ss_effects_downsample.glsl-3a0d9e65ad99c2f681bd35c921848995.res"]
+
+[params]
+

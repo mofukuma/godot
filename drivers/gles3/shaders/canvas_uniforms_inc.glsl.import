@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://be1mvjop4blus"
+path="res://.godot/imported/canvas_uniforms_inc.glsl-31a67133ec2b43b54cef4206cfb960b7.res"
+
+[deps]
+
+source_file="res://drivers/gles3/shaders/canvas_uniforms_inc.glsl"
+dest_files=["res://.godot/imported/canvas_uniforms_inc.glsl-31a67133ec2b43b54cef4206cfb960b7.res"]
+
+[params]
+
