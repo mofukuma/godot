@@ -6430,8 +6430,8 @@ void EditorNode::enable_education_mode() {
 
 	// Make sure center_split expands to take full window
 	if (center_split) {
-		center_split->set_v_size_flags(Control::SIZE_EXPAND_FILL);
-		center_split->set_h_size_flags(Control::SIZE_EXPAND_FILL);
+	// 	center_split->set_v_size_flags(Control::SIZE_EXPAND_FILL);
+	// 	center_split->set_h_size_flags(Control::SIZE_EXPAND_FILL);
 	}
 }
 

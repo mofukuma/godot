@@ -49,15 +49,8 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.8, 0.9, 1, 1)
 theme_override_font_sizes/font_size = 24
-text = "Welcome to the Godot Education System!
-
-This is a full-screen education interface running as an EditorPlugin.
-
-Features:
-• Full-screen main panel
-• Access to Godot editor APIs
-• Auto-launch on startup (with engine modification)
-• Cross-platform support"
+text = "Godot Engineを乗っ取ったぞ！
+すべてのUIとメニューを非表示にし、エディタ拡張を全画面で表示！！！"
 autowrap_mode = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
@@ -72,7 +65,7 @@ theme_override_constants/separation = 20
 custom_minimum_size = Vector2(300, 60)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-text = "Start Learning"
+text = "ゆるっとGDかいし"
 
 [node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(300, 60)
@@ -90,7 +83,7 @@ text = "Exit"
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6, 0.7, 0.8, 1)
 theme_override_font_sizes/font_size = 16
-text = "Powered by Godot Engine 4.5"
+text = "Powered by Godot Engine"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
